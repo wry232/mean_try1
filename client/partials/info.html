@@ -1,0 +1,29 @@
+<div ng-controller = "friendsController">
+  {{name}} {{2+3}}
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Show</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = "friend in friends">
+        <td>{{friend.firstName}}</td>
+        <td><a href="#/show/{{friend._id}}">show</a></td>
+        <td><a href="#/edit/{{friend._id}}">edit</a></td>
+        <td><a href="" ng-click='delete(friend._id)'>Delete</a></td>
+        <td>{{friend._id}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <form ng-submit = "toCreate()">
+    <input type="submit" value="Create">
+  </form>
+
+
+
+
+</div>

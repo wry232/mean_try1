@@ -1,0 +1,33 @@
+<div ng-controller = "friendsController">
+  {{2+3}}{{name}}
+<!-- You will attach an ng-model and an ng-submit to your forms (but might want to wait until the next tab, when you have your controllers and factory) -->
+<fieldset><legend>Users Controller</legend>
+<form ng-submit = createUser()>
+  First Name: <input type="text" ng-model = "newFriend.firstName">
+  Last Name: <input type="text" ng-model = "newFriend.lastName">
+  Birthday: <input type="date" ng-model = "newFriend.birthday">
+  <input type="submit" value="Add Player">
+</form>
+<table>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+      <th>Actions</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat = "friend in friends">>
+      <td>{{friend.firstName}}</td>
+      <td>{{friend.lastName}}</td>
+      <td>{{friend.birthday}}</td>
+      <td>{{friend._id}}</td>
+      <td><a href="" ng-click='delete(friend._id)'>Delete</a></td>
+    </tr>
+
+  </tbody>
+</table>
+</fieldset>
+</div>
